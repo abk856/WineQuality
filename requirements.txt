@@ -1,2 +1,2 @@
-flask=2.1.2
-sklearn=0.0
+flask==2.1.2
+sklearn==0.0
