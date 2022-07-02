@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Wine quality page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict your wine quality</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <input type="number" name="Alcohol" id="Alcohol" placeholder="Alcohol" step="any">
+            <input type="number" name="Malic acid" id="Malic acid" placeholder="Malic acid" step="any">
+            <input type="number" name="Ash" id="Ash" placeholder="Ash" step="any">
+            <input type="number" name="Alcalinity of ash" id="Alcalinity of ash" placeholder="Alcalinity of ash" step="any">
+            <input type="number" name="Magnesium" id="Magnesium" placeholder="Magnesium" step="any">
+            <input type="number" name="Total phenols" id="Total phenols"placeholder="Total phenols" step="any">
+            <input type="Flavanoids" name = "Flavanoids" id="Flavanoids" placeholder="Flavanoids" step="any">
+            <input type="number" name="Nonflavanoid phenols" id="Nonflavanoid phenols" placeholder="Nonflavanoid phenols" step="any">
+            <input type="number" name="Proanthocyanins" id="Proanthocyanins" placeholder="Proanthocyanins" step="any">
+            <input type="number" name="Color intensity" id="Color intensity" placeholder="Color intensity" step="any">
+            <input type="number" name="Hue" id="Hue" placeholder="Hue" step="any">
+            <input type="number" name="OD280/OD315 of diluted wines" id="OD280/OD315 of diluted wines" placeholder="OD280/OD315 of diluted wines" step="any">
+            <input type="number" name="Proline" id="Proline"placeholder="Proline" step="any">
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
